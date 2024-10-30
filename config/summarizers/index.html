@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../config/">
+        <link rel="prev" href="../docker/">
       
       
-        <link rel="next" href="../demonstrations/">
+        <link rel="next" href="../../dev/contribute/">
       
       
       <link rel="icon" href="../../assets/swe-agent.svg">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Command definitions - SWE-agent documentation</title>
+        <title>Summarizers - SWE-agent documentation</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#command-configuration" class="md-skip">
+        <a href="#summarizers-configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -142,7 +142,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Command definitions
+              Summarizers
             
           </span>
         </div>
@@ -948,30 +948,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Command definitions
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../commands/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -980,44 +960,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#scaffolding" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scaffolding
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#displaying-the-command-to-swe-agent" class="md-nav__link">
-    <span class="md-ellipsis">
-      Displaying the Command to SWE-agent
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1090,10 +1032,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../summarizers/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1102,6 +1053,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1394,32 +1346,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#scaffolding" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scaffolding
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#displaying-the-command-to-swe-agent" class="md-nav__link">
-    <span class="md-ellipsis">
-      Displaying the Command to SWE-agent
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1433,7 +1359,7 @@
                   
 
   
-    <a href="https://github.com/princeton-nlp/SWE-agent/edit/main/docs/config/commands.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/princeton-nlp/SWE-agent/edit/main/docs/config/summarizers.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1441,84 +1367,32 @@
   
 
 
-<h1 id="command-configuration">Command Configuration</h1>
-<p>In this document, we describe how to implement your own commands for the SWE-agent ACI.
-To see examples of command implementations, open the <code>.sh</code> and <code>.py</code> files in the
-<a href="https://github.com/princeton-nlp/SWE-agent/tree/main/config/commands"><code>config/commands</code></a> folder.</p>
-<h2 id="scaffolding">Scaffolding</h2>
-<p>Every command subscribes to the following skeleton code.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># @yaml</span>
-<span class="c1"># signature: [command] [argument(s)]</span>
-<span class="c1"># docstring: [Brief description of what your command does.]</span>
-<span class="c1"># arguments:</span>
-<span class="c1">#   [argument 1 name]:</span>
-<span class="c1">#       type: [type (i.e. integer, string)]</span>
-<span class="c1">#       description: [Brief description of this argument]</span>
-<span class="c1">#       required: [true|false]</span>
-<span class="c1">#   [argument 2 name]:</span>
-<span class="c1">#       ...</span>
-<span class="o">[</span>command<span class="o">]()</span><span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="c1"># Implementation here</span>
-<span class="o">}</span>
+<h1 id="summarizers-configuration">Summarizers Configuration</h1>
+<p>LMs perform best if given concise inputs; superfluous context can degrade performance while increasing costs. Because agents require LMs to process entire trajectories, compressing context is of particular importance.</p>
+<p>We designed two summarizers to handle long output commands. The first, a <strong><em>simple summarizer</em></strong>, saves the command output to a file if it exceeds a certain configurable line count. We show an indicative warning to the agent and tell it to open the saved command output using the built-in SWE-agent utility <code>open</code>.</p>
+<p>The second, an <strong><em>LM summarizer</em></strong>, integrates with the main agent to enhance its problem-solving efficacy and avoid exceeding input length limitations. It employs the same model (though can be configured differently) as the main agent; it receives a configurable prompt containing some context about the problem, the most recent action taken by the main agent, and any observations from that action exceeding a configurable line count threshold. The LM summarizer then generates a concise summary of the observation that is directly relevant to the ongoing problem. This summary is sent to the main agent, accompanied by a warning message indicating that the command output was summarized due to exceeding the line count limit.</p>
+<p>The summarizer configuration is defined within the main <a href="../config/">configuration</a> <code>.yaml</code> file, and has the following structure:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">summarizer_config</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reference to functionality of the summarizer. Can be one of SimpleSummarizer, LMSummarizer or Identity</span>
+<span class="w">  </span><span class="nt">window_length</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Threshold of the line count limit. Observation output exceeding this number will be summarized.</span>
+<span class="w">  </span><span class="nt">system_template</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
+<span class="w">    </span><span class="no">First `system` message shown to the LMSummarizer.</span>
+<span class="w">    </span><span class="no">This has no effect in other summarizer functionalities.</span>
+<span class="w">  </span><span class="nt">instance_template</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
+<span class="w">    </span><span class="no">Instance prompt, contains task instance-specific content,</span>
+<span class="w">    </span><span class="no">the most recent action taken by the main agent,</span>
+<span class="w">    </span><span class="no">and any observations from that action exceeding the line count threshold.</span>
+<span class="w">    </span><span class="no">This has effect only for the LM Summarizer functionality.</span>
+<span class="w">  </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">Optional configuration of a different model</span><span class="p p-Indicator">,</span>
+<span class="w">  </span><span class="nv">if not configured the same model as the main agent model will be used.</span>
+<span class="w">  </span><span class="nv">This has effect only for the LM Summarizer functionality.</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">model_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name of the model to use</span>
+<span class="w">    </span><span class="nt">per_instance_cost_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cost limit for every instance (task)</span>
+<span class="w">    </span><span class="nt">total_cost_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Total cost limit for summarizer only</span>
+<span class="w">    </span><span class="nt">temperature</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sampling temperature</span>
+<span class="w">    </span><span class="nt">top_p</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sampling top-p</span>
+<span class="w">    </span><span class="nt">host_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Host URL when using Ollama model</span>
 </code></pre></div>
-<ul>
-<li>If a command takes in arguments, reference them via positional parameters notation (i.e. <code>$1</code>).</li>
-<li>If there are no arguments, omit the <code>arguments</code> section.</li>
-<li>The implementation for your command is unconstrained. There are no limitations on the form of the underlying command code.</li>
-<li>The minimal documentation requirements are <code>signature</code> and <code>docstring</code>.</li>
-<li>If you'd like multiple commands to make modifications to a similar body of functions, we recommend using global variables.<ul>
-<li>For instance, in <code>config/commands/default.sh</code>, you'll see we define the <code>CURRENT_LINE</code> variable for the file viewer. This variable is modified across multiple commands, including <code>open</code>, <code>goto</code>, <code>scroll_up</code>, <code>scroll_down</code>, and <code>edit</code>.</li>
-<li>You can also third-party libraries (check out how we enable linting in <code>config/commands/edit_linting.sh</code>).</li>
-</ul>
-</li>
-<li>To show effects of the command, print to standard output (i.e. <code>echo</code>). SWE-agent is implemented such that it does not look for a return value from these commands.</li>
-<li>The following environment variables are used to persist information between commands:<ul>
-<li><code>CURRENT_FILE</code>: File that is currently open</li>
-<li><code>CURRENT_LINE</code>: First line of the window that is currently being shown/edited</li>
-<li><code>WINDOW</code> (start line to end line): Part of the file that is currently shown/edited</li>
-<li><code>START_CURSOR</code>, <code>END_CURSOR</code>: Only used for the <code>cursors_*</code> commands.</li>
-</ul>
-</li>
-<li>You can also use environment variables to set parameters for your commands. For this, edit the <code>env_vars</code> section of the <a href="../config/">config</a>.
-  For example, the <code>WINDOW</code> setting controls the number of context lines shown when editing a file.</li>
-</ul>
-<h2 id="displaying-the-command-to-swe-agent">Displaying the Command to SWE-agent</h2>
-<p>After you define a command, there are a small set of additional steps to making it available for the agent to use.</p>
-<p>First, within your config file...</p>
-<ul>
-<li>Add <code>config/commands/&lt;file name&gt;.sh</code> file to the <code>command_files</code> field.</li>
-<li>Set the <code>parse_command</code> field to <code>ParseCommandBash</code> or <code>ParseCommandDetailed</code>. This key points to the functionality that generates how command documentation is shown to the agent.</li>
-<li>Decide which template(s) you want to show the <code>{command_docs}</code> in.<ul>
-<li>We strongly recommend including <code>{command_docs}</code> in the <code>system_template</code>, which is the first message shown to the agent for every task instance episode.</li>
-<li>You might also consider adding <code>{command_docs}</code> to the <code>format_error_template</code>, which is shown if the response provided by a model is malformed.</li>
-</ul>
-</li>
-<li>(Optional) Including a demonstration that uses a command is helpful to showcase proper use + increases the frequency with which the agent uses the command. If you'd like to add a demonstration...<ul>
-<li>Create a demonstration manually (i.e. <code>python run.py --model human_thought ...</code>) or automatically (i.e. <code>python run_replay --traj_path ...</code>)</li>
-<li>Add/Update the demonstration to the <code>demonstrations</code> argument.</li>
-<li>Update <code>demonstration_template</code> to control how the demonstration is displayed to the agent.</li>
-</ul>
-</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Config files</p>
-<p>If you're not familiar with how SWE-agent configuration files work, we recommend checking out the <a href="../config/"><code>config</code> documentation</a>.</p>
-</div>
-<p>Next, run your configuration and see how your agent uses the commands!
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>run.py<span class="w"> </span>--config_file<span class="w"> </span>config/<span class="o">[</span>your<span class="w"> </span>config<span class="o">]</span>.yaml<span class="w"> </span>...
-</code></pre></div></p>
-<div class="grid cards">
-<ul>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 12h-4v-2h4m0 6h-4v-2h4m6-6h-2.81a6 6 0 0 0-1.82-1.96L17 4.41 15.59 3l-2.17 2.17a6 6 0 0 0-2.83 0L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20z"/></svg></span> <strong>Something broken?</strong>
-    <a href="https://github.com/princeton-nlp/SWE-agent/issues/new?template=bug_report.yml"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Report bug</a></p>
-</li>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 19h3v3h-3zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6"/></svg></span> <strong>Something unclear?</strong>
-    <a href="https://github.com/princeton-nlp/SWE-agent/issues/new?template=question.yml"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Ask question</a></p>
-</li>
-</ul>
-</div>
 
 
 
@@ -1554,7 +1428,7 @@ To see examples of command implementations, open the <code>.sh</code> and <code>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../config/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Config files">
+          <a href="../docker/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Docker images">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1564,20 +1438,20 @@ To see examples of command implementations, open the <code>.sh</code> and <code>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Config files
+                Docker images
               </div>
             </div>
           </a>
         
         
           
-          <a href="../demonstrations/" class="md-footer__link md-footer__link--next" aria-label="Next: Demonstrations">
+          <a href="../../dev/contribute/" class="md-footer__link md-footer__link--next" aria-label="Next: Contribution guide">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Demonstrations
+                Contribution guide
               </div>
             </div>
             <div class="md-footer__button md-icon">

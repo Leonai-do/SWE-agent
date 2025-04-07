@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://swe-agent.com/latest/reference/">
+        <link rel="canonical" href="https://swe-agent.com/latest/config/models/">
       
       
-        <link rel="prev" href="../dev/formatting_conflicts/">
+        <link rel="prev" href="../templates/">
       
       
-        <link rel="next" href="run_single_config/">
+        <link rel="next" href="../demonstrations/">
       
       
-      <link rel="icon" href="../assets/favicon.ico">
+      <link rel="icon" href="../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
     
     
       
-        <title>API Reference - SWE-agent documentation</title>
+        <title>Models - SWE-agent documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -54,15 +54,15 @@
       
     
     
-      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../assets/custom.css">
+      <link rel="stylesheet" href="../../assets/custom.css">
     
-      <link rel="stylesheet" href="../assets/mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/mkdocstrings.css">
     
-      <link rel="stylesheet" href="../assets/image_theme.css">
+      <link rel="stylesheet" href="../../assets/image_theme.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -79,7 +79,7 @@
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -88,7 +88,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -107,7 +107,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#api-reference" class="md-skip">
+        <a href="#models" class="md-skip">
           Skip to content
         </a>
       
@@ -144,9 +144,9 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="SWE-agent documentation" class="md-header__button md-logo" aria-label="SWE-agent documentation" data-md-component="logo">
+    <a href="../.." title="SWE-agent documentation" class="md-header__button md-logo" aria-label="SWE-agent documentation" data-md-component="logo">
       
-  <img src="../assets/swe-agent.svg" alt="logo">
+  <img src="../../assets/swe-agent.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -163,7 +163,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API Reference
+              Models
             
           </span>
         </div>
@@ -280,7 +280,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
     
     
       <li class="md-tabs__item">
-        <a href=".." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
   
@@ -298,11 +298,13 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../usage/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../usage/" class="md-tabs__link">
           
   
   
@@ -320,13 +322,11 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../reference/" class="md-tabs__link">
           
   
   
@@ -368,9 +368,9 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="SWE-agent documentation" class="md-nav__button md-logo" aria-label="SWE-agent documentation" data-md-component="logo">
+    <a href="../.." title="SWE-agent documentation" class="md-nav__button md-logo" aria-label="SWE-agent documentation" data-md-component="logo">
       
-  <img src="../assets/swe-agent.svg" alt="logo">
+  <img src="../../assets/swe-agent.svg" alt="logo">
 
     </a>
     SWE-agent documentation
@@ -424,7 +424,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
         
           
           <div class="md-nav__link md-nav__container">
-            <a href=".." class="md-nav__link ">
+            <a href="../.." class="md-nav__link ">
               
   
   
@@ -492,7 +492,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../installation/" class="md-nav__link ">
+            <a href="../../installation/" class="md-nav__link ">
               
   
   
@@ -527,7 +527,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../installation/source/" class="md-nav__link">
+      <a href="../../installation/source/" class="md-nav__link">
         
   
   
@@ -550,7 +550,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../installation/codespaces/" class="md-nav__link">
+      <a href="../../installation/codespaces/" class="md-nav__link">
         
   
   
@@ -573,7 +573,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../installation/keys/" class="md-nav__link">
+      <a href="../../installation/keys/" class="md-nav__link">
         
   
   
@@ -596,7 +596,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../installation/migration/" class="md-nav__link">
+      <a href="../../installation/migration/" class="md-nav__link">
         
   
   
@@ -619,7 +619,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../installation/tips/" class="md-nav__link">
+      <a href="../../installation/tips/" class="md-nav__link">
         
   
   
@@ -642,7 +642,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../installation/changelog/" class="md-nav__link">
+      <a href="../../installation/changelog/" class="md-nav__link">
         
   
   
@@ -728,7 +728,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../usage/hello_world/" class="md-nav__link">
+      <a href="../../usage/hello_world/" class="md-nav__link">
         
   
   
@@ -751,7 +751,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../usage/cl_tutorial/" class="md-nav__link">
+      <a href="../../usage/cl_tutorial/" class="md-nav__link">
         
   
   
@@ -774,7 +774,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../usage/coding_challenges/" class="md-nav__link">
+      <a href="../../usage/coding_challenges/" class="md-nav__link">
         
   
   
@@ -797,7 +797,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../usage/inspector/" class="md-nav__link">
+      <a href="../../usage/inspector/" class="md-nav__link">
         
   
   
@@ -820,7 +820,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../usage/batch_mode/" class="md-nav__link">
+      <a href="../../usage/batch_mode/" class="md-nav__link">
         
   
   
@@ -843,7 +843,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../usage/whats_next/" class="md-nav__link">
+      <a href="../../usage/whats_next/" class="md-nav__link">
         
   
   
@@ -874,7 +874,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
+      <a href="../../faq/" class="md-nav__link">
         
   
   
@@ -901,6 +901,8 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
       
   
   
+    
+  
   
   
     
@@ -924,18 +926,21 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../usage/" class="md-nav__link ">
+            <a href="../../usage/" class="md-nav__link ">
               
   
   
@@ -948,13 +953,13 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             User Guides
@@ -995,7 +1000,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../background/" class="md-nav__link ">
+            <a href="../../background/" class="md-nav__link ">
               
   
   
@@ -1030,7 +1035,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../background/architecture/" class="md-nav__link">
+      <a href="../../background/architecture/" class="md-nav__link">
         
   
   
@@ -1053,7 +1058,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../background/aci/" class="md-nav__link">
+      <a href="../../background/aci/" class="md-nav__link">
         
   
   
@@ -1084,7 +1089,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../usage/cli/" class="md-nav__link">
+      <a href="../../usage/cli/" class="md-nav__link">
         
   
   
@@ -1107,7 +1112,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../usage/trajectories/" class="md-nav__link">
+      <a href="../../usage/trajectories/" class="md-nav__link">
         
   
   
@@ -1127,6 +1132,8 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
                 
   
   
+    
+  
   
   
     
@@ -1155,15 +1162,15 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../config/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1182,7 +1189,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             Configuration
@@ -1198,7 +1205,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../config/config/" class="md-nav__link">
+      <a href="../config/" class="md-nav__link">
         
   
   
@@ -1221,7 +1228,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../config/templates/" class="md-nav__link">
+      <a href="../templates/" class="md-nav__link">
         
   
   
@@ -1241,10 +1248,32 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../config/models/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Models
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1255,6 +1284,86 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes-for-specific-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes for specific models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes for specific models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anthropic-claude" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anthropic Claude
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o1" class="md-nav__link">
+    <span class="md-ellipsis">
+      o1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-multiple-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using multiple keys
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#models-for-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Models for testing
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1267,7 +1376,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../config/demonstrations/" class="md-nav__link">
+      <a href="../demonstrations/" class="md-nav__link">
         
   
   
@@ -1290,7 +1399,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../config/tools/" class="md-nav__link">
+      <a href="../tools/" class="md-nav__link">
         
   
   
@@ -1313,7 +1422,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../config/environments/" class="md-nav__link">
+      <a href="../environments/" class="md-nav__link">
         
   
   
@@ -1391,7 +1500,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../dev/contribute/" class="md-nav__link">
+      <a href="../../dev/contribute/" class="md-nav__link">
         
   
   
@@ -1414,7 +1523,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="../dev/formatting_conflicts/" class="md-nav__link">
+      <a href="../../dev/formatting_conflicts/" class="md-nav__link">
         
   
   
@@ -1449,8 +1558,6 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
       
   
   
-    
-  
   
   
     
@@ -1476,21 +1583,18 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../reference/" class="md-nav__link ">
               
   
   
@@ -1503,13 +1607,13 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             API Reference
@@ -1572,7 +1676,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="run_single_config/" class="md-nav__link">
+      <a href="../../reference/run_single_config/" class="md-nav__link">
         
   
   
@@ -1595,7 +1699,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="run_batch_config/" class="md-nav__link">
+      <a href="../../reference/run_batch_config/" class="md-nav__link">
         
   
   
@@ -1675,7 +1779,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="problem_statements/" class="md-nav__link">
+      <a href="../../reference/problem_statements/" class="md-nav__link">
         
   
   
@@ -1698,7 +1802,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="repo/" class="md-nav__link">
+      <a href="../../reference/repo/" class="md-nav__link">
         
   
   
@@ -1721,7 +1825,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="batch_instances/" class="md-nav__link">
+      <a href="../../reference/batch_instances/" class="md-nav__link">
         
   
   
@@ -1807,7 +1911,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="agent_config/" class="md-nav__link">
+      <a href="../../reference/agent_config/" class="md-nav__link">
         
   
   
@@ -1830,7 +1934,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="model_config/" class="md-nav__link">
+      <a href="../../reference/model_config/" class="md-nav__link">
         
   
   
@@ -1853,7 +1957,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="template_config/" class="md-nav__link">
+      <a href="../../reference/template_config/" class="md-nav__link">
         
   
   
@@ -1876,7 +1980,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="tools_config/" class="md-nav__link">
+      <a href="../../reference/tools_config/" class="md-nav__link">
         
   
   
@@ -1899,7 +2003,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="history_processor_config/" class="md-nav__link">
+      <a href="../../reference/history_processor_config/" class="md-nav__link">
         
   
   
@@ -1922,7 +2026,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="parsers/" class="md-nav__link">
+      <a href="../../reference/parsers/" class="md-nav__link">
         
   
   
@@ -1953,7 +2057,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="env_config/" class="md-nav__link">
+      <a href="../../reference/env_config/" class="md-nav__link">
         
   
   
@@ -1976,7 +2080,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="bundle_config/" class="md-nav__link">
+      <a href="../../reference/bundle_config/" class="md-nav__link">
         
   
   
@@ -2048,7 +2152,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="agent/" class="md-nav__link">
+      <a href="../../reference/agent/" class="md-nav__link">
         
   
   
@@ -2071,7 +2175,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="env/" class="md-nav__link">
+      <a href="../../reference/env/" class="md-nav__link">
         
   
   
@@ -2094,7 +2198,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
   
     <li class="md-nav__item">
-      <a href="exceptions/" class="md-nav__link">
+      <a href="../../reference/exceptions/" class="md-nav__link">
         
   
   
@@ -2145,6 +2249,74 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes-for-specific-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes for specific models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes for specific models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anthropic-claude" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anthropic Claude
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o1" class="md-nav__link">
+    <span class="md-ellipsis">
+      o1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-multiple-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using multiple keys
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#models-for-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Models for testing
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2159,7 +2331,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
 
 
   
-    <a href="https://github.com/SWE-agent/SWE-agent/edit/main/docs/reference/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/SWE-agent/SWE-agent/edit/main/docs/config/models.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2167,12 +2339,69 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
   
 
 
-<h1 id="api-reference">API Reference</h1>
-<p>This section shows all configuration options, as well as API details for the main classes.</p>
+<h1 id="models">Models</h1>
 <div class="admonition tip">
-<p class="admonition-title">SWE-agent architecture</p>
-<p>Before you dive into the code, please first read the <a href="../background/architecture/">architecture page</a> for an overview of SWE-agent.</p>
+<p class="admonition-title">Required reading</p>
+<p>See <a href="../../installation/keys/">the model section</a> in the installation guide for a primer before reading the rest of this page.</p>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Related pages</p>
+<ul>
+<li>See <a href="../../reference/model_config/">the model config reference</a> for the full list of model options</li>
+<li>To control how the agent extracts the actions from the model response, see the <a href="../../reference/parsers/">action parsers</a> reference</li>
+</ul>
+</div>
+<h2 id="notes-for-specific-models">Notes for specific models</h2>
+<h3 id="local-models">Local models</h3>
+<p>See <a href="../../installation/keys/">the model section</a> in the installation guide.
+Remember to unset spending limits and configure the action parser if you cannot support function calling.</p>
+<h3 id="anthropic-claude">Anthropic Claude</h3>
+<p>Prompt caching makes SWE-agent several times more affordable. While this is done automatically for models like <code>gpt-4o</code>,
+care has to be taken for Anthropic Claude, as you need to manually set the cache break points.</p>
+<p>For this, include the following history processor:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">agent</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">history_processors</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cache_control</span>
+<span class="w">    </span><span class="nt">last_n_messages</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Other history processors</p>
+<p>Other history processors might interfere with the prompt caching
+if you are not careful.
+However, if your history processor is only modifying the last observation,
+you can combine as done <a href="https://github.com/SWE-agent/SWE-agent/blob/main/config/sweagent_heavy.yaml">here</a>.</p>
+</div>
+<p>Anthropic Claude gives you 4 cache break points per key.
+You need two of them for a single agent run (because the break points are both used to retrieve and set the cache).
+Therefore, you can only run two parallel instances of SWE-agent with <a href="../../usage/batch_mode/"><code>run-batch</code></a> per key.
+To support more parallel running instances, supply multiple keys as described below.</p>
+<p>We recommend that you check how often you hit the cache. A very simple way is to go to your trajectory directory and grep like so:</p>
+<div class="highlight"><pre><span></span><code>grep<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;cached_tokens=[0-9]*&quot;</span><span class="w"> </span>django__django-11299.debug.log
+</code></pre></div>
+<p>Note that the maximum number of output tokens of Claude 3.7 can be extended with extra headers.
+See <a href="https://github.com/BerriAI/litellm/issues/8984">this issue in litellm</a> and and <a href="https://github.com/SWE-agent/SWE-agent/issues/1035">swe-agent PR #1035</a>
+for omore information.
+Since <a href="https://github.com/SWE-agent/SWE-agent/pull/1036">#1036</a> you can also manually set the maximum output tokens and override the information
+from <code>litellm</code>.</p>
+<h3 id="o1">o1</h3>
+<p>Make sure to set</p>
+<div class="highlight"><pre><span></span><code><span class="nt">agent</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">model</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">top_p</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">        </span><span class="nt">temperature</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.</span>
+</code></pre></div>
+<p>as other values aren't supported by <code>o1</code>.</p>
+<h2 id="using-multiple-keys">Using multiple keys</h2>
+<p>We support rotating through multiple keys for <a href="../../usage/batch_mode/"><code>run-batch</code></a>. For this, concatenate all keys with <code>:::</code> and set them via the <code>--agent.model.api_key</code> flag.
+Every thread (i.e., every parallel running agent that is working on one task instance) will stick to one key during the entire run, i.e., this does not break prompt caching.</p>
+<h2 id="models-for-testing">Models for testing</h2>
+<p>We also provide models for testing SWE-agent without spending any credits</p>
+<ul>
+<li><code>HumanModel</code> and <code>HumanThoughtModel</code> will prompt for input from the user that stands in for the output of the LM. This can be used to create new <a href="../demonstrations/#manual">demonstrations</a>.</li>
+<li><code>ReplayModel</code> takes a trajectory as input and "replays it"</li>
+<li><code>InstantEmptySubmitTestModel</code> will create an empty <code>reproduce.py</code> and then submit</li>
+</ul>
+<p>% include-markdown "../_footer.md" %}</p>
 
 
 
@@ -2210,7 +2439,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../dev/formatting_conflicts/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Formatting conflicts">
+          <a href="../templates/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Templates">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2220,20 +2449,20 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
                 Previous
               </span>
               <div class="md-ellipsis">
-                Formatting conflicts
+                Templates
               </div>
             </div>
           </a>
         
         
           
-          <a href="run_single_config/" class="md-footer__link md-footer__link--next" aria-label="Next: Run single">
+          <a href="../demonstrations/" class="md-footer__link md-footer__link--next" aria-label="Next: Demonstrations">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Run single
+                Demonstrations
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2269,12 +2498,12 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.top", "content.action.edit", "navigation.footer", "content.code.copy", "content.footnote.tooltips", "header.autohide", "announce.dismiss", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.top", "content.action.edit", "navigation.footer", "content.code.copy", "content.footnote.tooltips", "header.autohide", "announce.dismiss", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
-        <script src="../assets/js/sh-annotation.js"></script>
+        <script src="../../assets/js/sh-annotation.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
